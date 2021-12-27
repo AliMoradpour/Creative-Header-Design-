@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+*{
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+}
+body{font-family:Georgia, 'Times New Roman', Times, serif;}
+
+
+#main-header{
+ background:linear-gradient(to top , #003172 30%, #000 70%);
+ width: 100%;
+ height: 90vh;
+}
+.container{
+ display: flex;
+ height: 90vh;
+}
+
+.left{
+ width: 50%;
+ background:#000;
+ clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+ color: #fff;
+ display: flex;
+ align-items: center;
+
+}
+.img{
+ width: 30%;
+ z-index: 1;
+ position: absolute;
+ top: 1%;
+ left: -100px;
+ animation: opacity 1s ease-out;
+}
+.text-image{
+ width: 70%;
+ height: 60vh;
+ margin: 2rem;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+ padding-left: 2rem;
+
+}
+
+.title{
+ font-size: 3.5rem;
+ margin-top: 9rem;
+ animation: up 1s ease-out;
+}
+.right{
+ background: url('../img/7310.jpg');
+ width: 50%;
+ background-size: cover;
+ background-position: center;
+ clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+}
+.text{
+ font-size: 1.4rem;
+ font-family: 'Lobster', cursive;
+ animation: up 1s ease-in;
+
+}
+
+/* Animations  */
+
+@keyframes opacity {
+ 0%{
+  opacity: 0;
+ }
+ 20%{
+  opacity: 1;
+ }
+ 40%{
+  opacity: 0;
+ }
+ 60%{
+  opacity: 1;
+ }
+ 80%{
+  opacity: 0;
+ }
+ 100%{
+  opacity: 1;
+ }
+ 
+}
+@keyframes up {
+ 0%{
+  opacity: 0;
+ }
+ 40%{
+  opacity: 0;
+ }
+ 50%{
+  transform: scale(.5);
+ }
+ 100%{
+  transform: scale(1);
+ }
+}
